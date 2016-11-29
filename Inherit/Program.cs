@@ -10,9 +10,13 @@ namespace Inherit
     {
         static void Main(string[] args)
         {
+            string str = "";
+            string input = "";
+            int ValueIn = 0;
+
             Console.WriteLine("Please select one of the following option: 1=Buble Sort, 2=Insertion Sort, 3=Stack, 4=Circular Buffer");
             Console.Write("Please enter your selection: ");
-            string str = Console.ReadLine();
+            str = Console.ReadLine();
 
             switch (str)
             {
@@ -29,16 +33,61 @@ namespace Inherit
                     Insert.FillArrayFromConsole();
                     Insert.InsertionSorterAlg();
                     Insert.PrintInsert();
-                   /* arrayNew = FillArrayFromConsole(ref sizeArr);
-                    InsertionSorter InsertionSort = new InsertionSorter(arrayNew, sizeArr);
-                    InsertionSort.PrintArr(arrayNew);
-                    InsertionSort.SortInsertion();
-                    InsertionSort.PrintArr(arrayNew);*/
                     break;
                 case "3":
                 case "Stack":
-                    /*Stack StackInst = new Stack();
-                    StackMenu(StackInst);*/
+                    MyStack StackInst = new MyStack();
+                    StackInst.StackInit();
+
+                    while (str != "q")
+                    {
+                        Console.WriteLine("Please select one of the following option: 1=push, 2=pop, q=quit");
+                        //Console.WriteLine("Please enter your selection: ");
+                        str = Console.ReadLine();
+                        switch (str)
+                        {
+                            case "1":
+                            case "push":
+                                // return true if stack is still not full, otherwise return false
+                                if (!StackInst.IsFull())
+                                {
+                                    Console.Write("Please enter the value to push: ");
+                                    while (!(int.TryParse(Console.ReadLine(), out ValueIn))) // validate the input from console
+                                    {
+                                        Console.Write("Wrong value. Please enter the value to push: ");
+                                    }
+                                    StackInst.Push(ValueIn);
+                                    Console.Write("Your stack is: ");
+                                    StackInst.Print();// print the stack current status
+                                }
+                                else
+                                {
+                                    Console.WriteLine("The stack is full");
+                                }
+                                break;
+                            case "2":
+                            case "pull":
+                                // return true if stack is still not empty, otherwise return false
+                                if (!StackInst.IsEmpty())
+                                {
+                                    Console.Write("Your stack is: ");
+                                    StackInst.Pop();
+                                    StackInst.Print(); // print the stack current status
+                                    Console.WriteLine("The value pulled from top is: " + StackInst.Peek());
+                                }
+                                else
+                                {
+                                    Console.WriteLine("The stack is empty ");
+                                }
+                                break;
+                            case "q":
+                            case "quite":
+                                break;
+                            default:
+                                Console.Write("Invalid selection. ");
+                                break;
+                        }
+                    }
                     break;
                 case "4":
                 case "Circular Buffer":

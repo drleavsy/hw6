@@ -69,7 +69,6 @@ namespace Inherit
         }
         
         //protected void SorterInitArray(int[] arrayB, int sizeArray) { }
-
         protected bool swapArr(int[] arrayIn, int sizeIn, int inx1, int inx2)
         {
             int temp1 = 0;
