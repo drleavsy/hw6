@@ -1,0 +1,8 @@
+c:\users\drleavsy\documents\visual studio 2015\Projects\Inherit\Inherit\bin\Debug\Inherit.exe.config
+c:\users\drleavsy\documents\visual studio 2015\Projects\Inherit\Inherit\bin\Debug\Inherit.exe
+c:\users\drleavsy\documents\visual studio 2015\Projects\Inherit\Inherit\bin\Debug\Inherit.pdb
+c:\users\drleavsy\documents\visual studio 2015\Projects\Inherit\Inherit\obj\Debug\Inherit.exe
+c:\users\drleavsy\documents\visual studio 2015\Projects\Inherit\Inherit\obj\Debug\Inherit.pdb
+C:\Users\drleavsy\Documents\Visual Studio 2015\Projects\HW6\Inherit\bin\Debug\Inherit.exe.config
+C:\Users\drleavsy\Documents\Visual Studio 2015\Projects\HW6\Inherit\obj\Debug\Inherit.exe
+C:\Users\drleavsy\Documents\Visual Studio 2015\Projects\HW6\Inherit\obj\Debug\Inherit.pdb

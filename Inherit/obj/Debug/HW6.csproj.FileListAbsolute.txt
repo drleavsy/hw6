@@ -1,0 +1,6 @@
+C:\Users\drleavsy\Documents\Visual Studio 2015\Projects\HW6\Inherit\bin\Debug\Inherit.exe.config
+C:\Users\drleavsy\Documents\Visual Studio 2015\Projects\HW6\Inherit\bin\Debug\Inherit.exe
+C:\Users\drleavsy\Documents\Visual Studio 2015\Projects\HW6\Inherit\bin\Debug\Inherit.pdb
+C:\Users\drleavsy\Documents\Visual Studio 2015\Projects\HW6\Inherit\obj\Debug\HW6.csprojResolveAssemblyReference.cache
+C:\Users\drleavsy\Documents\Visual Studio 2015\Projects\HW6\Inherit\obj\Debug\Inherit.exe
+C:\Users\drleavsy\Documents\Visual Studio 2015\Projects\HW6\Inherit\obj\Debug\Inherit.pdb
