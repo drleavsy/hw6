@@ -46,6 +46,7 @@
     <Compile Include="BubbleSorter.cs" />
     <Compile Include="Buffer.cs" />
     <Compile Include="InsertionSorter.cs" />
+    <Compile Include="MyQueue.cs" />
     <Compile Include="MyStack.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

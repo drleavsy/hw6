@@ -91,9 +91,49 @@ namespace Inherit
                     break;
                 case "4":
                 case "Circular Buffer":
-                   /* Queue QueueInst = new Queue();
+                    str = "";
+                    input = "";
+
+                    MyQueue QueueInst = new MyQueue();
                     QueueInst.QueueInit();
-                    QueueMenu(QueueInst);*/
+
+                    while (str != "q")
+                    {
+                        Console.WriteLine("Please select one of the following option: 1=enqueue, 2=dequeue q=quit");
+                        str = Console.ReadLine();  // read user input from the console
+                        switch (str)
+                        {
+                            case "1":
+                            case "enqueue": // write new element to the buffer from the head
+                                Console.Write("Please enter the value to enqueue: ");
+                                input = Console.ReadLine();
+
+                                if (int.TryParse(input, out ValueIn))
+                                {
+                                    if (!QueueInst.IsFull())
+                                    {
+                                        QueueInst.Enqueue(ValueIn);
+                                        QueueInst.Print();
+                                    }
+                                }
+                                break;
+                            case "2":
+                            case "dequeue": // delete first element from the buffer from the tail
+                                if (!QueueInst.IsEmpty())
+                                {
+                                    ValueIn = QueueInst.Dequeue();
+                                    QueueInst.Print();
+                                    Console.WriteLine("The value deleted from the queue: " + QueueInst.Peek());
+                                }
+                                break;
+                            case "q":
+                            case "quit":
+                                break;
+                            default:
+                                Console.Write("Invalid selection. ");
+                                break;
+                        }
+                    }
                     break;
                 default:
                     Console.WriteLine("Invalid selection. Please select 1, 2, or 3, or 4.");
