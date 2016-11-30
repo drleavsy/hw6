@@ -55,7 +55,7 @@ namespace Inherit
             Console.WriteLine("Press ENTER to quit");
             Console.Read();
         }
-        public void PrintBubble()
+        public void Print()
         {
             PrintArr(getArray());
         }

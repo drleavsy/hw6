@@ -38,7 +38,7 @@ namespace Inherit
             SorterFillArrayFromConsole();
         }
 
-        public void PrintInsert()
+        public void Print()
         {
             PrintArr(getArray());
         }
