@@ -20,6 +20,10 @@ namespace Inherit
             sizeA = 0;
         }
 
+        protected void SetSize(int sizeNew)
+        {
+            sizeA = sizeNew;
+        }
         protected int GetSize()
         {
             return sizeA;
@@ -53,19 +57,12 @@ namespace Inherit
             ind2 = inx2;
         }
 
-        public virtual void BubbleSorterAlg() { }
-        public virtual void InsertionSorterAlg() { }
+        public virtual void Sort() { }
 
-        protected void updateArray(int[] arrayNew, int sizeArray)
+        protected void InitArraySort(int[] arrayNew, int sizeArray)
         {
-            arrayA = new int[sizeArray];
-
-            sizeA = sizeArray;
-
-            for (int i = 0; i < sizeArray; i++)
-            {
-                arrayA[i] = arrayNew[i];
-            }
+            SetSize(sizeArray);
+            arrayA = arrayNew; 
         }
         
         //protected void SorterInitArray(int[] arrayB, int sizeArray) { }
@@ -90,42 +87,6 @@ namespace Inherit
                 }
             }
             return false; // if index is larger than array size 
-        }
-        // read array from console
-        protected void SorterFillArrayFromConsole()
-        {
-            string input;
-            int i = 0;
-            int elem = 0;
-            int sizeIn = 0;
-
-            //Random rnd = new Random();
-            // read the size of array
-            Console.Write("Please write the array size: ");
-            // read the size of array from user input
-            while (!(int.TryParse(Console.ReadLine(), out sizeIn)))
-            {
-                Console.WriteLine("Please enter proper array size again: ");
-            }
-            int[] arrayIn = new int[sizeIn];
-            // read from console 1-by-1 separated by ENTER
-            Console.WriteLine("Please enter array's elements one-by-one: ");
-            while (i < sizeIn)
-            {
-                input = Console.ReadLine();
-                if (int.TryParse(input, out elem))
-                {
-                    arrayIn[i] = elem;
-                    i++;
-                }
-                else
-                {
-                    Console.WriteLine("Enter the proper array element #", i, " again: ");
-                }
-            }
-            updateArray(arrayIn, sizeIn);
-            Console.Write("The array before sorting: ");
-            PrintArr(arrayIn);
         }
 
         protected void PrintArr(int[] arrayIn)

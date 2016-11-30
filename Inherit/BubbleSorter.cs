@@ -10,7 +10,7 @@ namespace Inherit
     {
         private int ind_last;
 
-        public BubbleSorter()
+        public BubbleSorter(int[] arrayA)
         {
             ind_last = 0;
             SetSwapCounter(1);
@@ -18,14 +18,12 @@ namespace Inherit
             SetInd2(1);
         }
 
-       // public void BubbleGetArray() { }
-
-        public void FillArrayFromConsole()
+        public void InitArray(int[] arrayNew, int sizeArray)
         {
-            SorterFillArrayFromConsole();
+            InitArraySort(arrayNew, sizeArray);
         }
-
-        public override void BubbleSorterAlg()
+        
+        public override void Sort()
         {
             ind_last = GetSize() + 1; // initilize last first sorted index for buble sort: index until which sorting is done, above this index array will be sorted
 

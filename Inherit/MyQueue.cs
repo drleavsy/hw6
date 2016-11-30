@@ -17,7 +17,7 @@ namespace Inherit
             tail = 0;
         }
 
-        public override void Enqueue(int valueIn)
+        public void Enqueue(int valueIn)
         {
             if (head < GetSize())  // check if head index is less than the array size
             {
@@ -34,7 +34,7 @@ namespace Inherit
             }
         }
 
-        public override int Dequeue()
+        public int Dequeue()
         {
             if (tail < GetSize()) // if the tail is less than the size of array
             {
@@ -127,7 +127,7 @@ namespace Inherit
                 }
             }
         }
-        public override int Peek()
+        public int Peek()
         {
             return GetValue();
         }

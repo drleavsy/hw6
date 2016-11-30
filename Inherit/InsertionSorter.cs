@@ -8,14 +8,14 @@ namespace Inherit
 {
     class InsertionSorter : Sorter
     {
-        public InsertionSorter() 
+        public InsertionSorter(int[] arrayA) 
         {
             SetSwapCounter(1);
             SetInd1(0);
             SetInd2(0);
         }
 
-        public override void InsertionSorterAlg()
+        public override void Sort()
         {
             while (GetInd2() < GetSize())
             {
@@ -33,9 +33,9 @@ namespace Inherit
             Console.Read();
         }
 
-        public void FillArrayFromConsole()
+        public void InitArray(int[] arrayNew, int sizeArray)
         {
-            SorterFillArrayFromConsole();
+            InitArraySort(arrayNew, sizeArray);
         }
 
         public void Print()

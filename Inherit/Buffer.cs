@@ -72,13 +72,6 @@ namespace Inherit
         virtual public bool IsFull() { return false; }
         virtual public bool IsEmpty()   { return false; }
 
-        virtual public int Pop() { return -2; }
-        virtual public void Push( int valueIn) { }
-        virtual public int Peek( ) { return -2; }
-
-        virtual public int Dequeue() { return -2; }
-        virtual public void Enqueue(int valueIn) { }
-
         virtual public void Print() { }
 
         protected void BufferInit()

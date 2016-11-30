@@ -15,7 +15,7 @@ namespace Inherit
             top = 0;
         }
 
-        public override int Pop()
+        public int Pop()
         {
             int ValuePop = 0;
             ValuePop = GetArrayVal(top - 1);  // save value from the top and pass it out from the method 
@@ -26,13 +26,13 @@ namespace Inherit
             return ValuePop;
         }
 
-        public override void Push(int valueIn)
+        public void Push(int valueIn)
         {
             SetArrayVal(top, valueIn); // push one element
             top++; // move cursor to the top of the stack
             SetCount(GetCount() + 1);   // increase the size of stack
         }
-        public override int Peek()
+        public int Peek()
         {
             return GetValue();
         }

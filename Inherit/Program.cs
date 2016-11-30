@@ -13,6 +13,8 @@ namespace Inherit
             string str = "";
             string input = "";
             int ValueIn = 0;
+            int [] arrayMain = null;
+            int sizeIn = 0;
 
             Console.WriteLine("Please select one of the following option: 1=Buble Sort, 2=Insertion Sort, 3=Stack, 4=Circular Buffer");
             Console.Write("Please enter your selection: ");
@@ -22,16 +24,20 @@ namespace Inherit
             {
                 case "1":
                 case "Bubble Sort":
-                    BubbleSorter Bub = new BubbleSorter();
-                    Bub.FillArrayFromConsole();
-                    Bub.BubbleSorterAlg();
+                    arrayMain = SorterFillArrayFromConsole(ref sizeIn);
+                    BubbleSorter Bub = new BubbleSorter(arrayMain);
+                    Bub.InitArray(arrayMain, sizeIn);
+                    Bub.Print();
+                    Bub.Sort();
                     Bub.Print();
                     break;
                 case "2":
                 case "Insertion Sort":
-                    InsertionSorter Insert = new InsertionSorter();
-                    Insert.FillArrayFromConsole();
-                    Insert.InsertionSorterAlg();
+                    arrayMain = SorterFillArrayFromConsole( ref sizeIn);
+                    InsertionSorter Insert = new InsertionSorter(arrayMain);
+                    Insert.InitArray(arrayMain, sizeIn);
+                    Insert.Print();
+                    Insert.Sort();
                     Insert.Print();
                     break;
                 case "3":
@@ -141,6 +147,40 @@ namespace Inherit
             }
             Console.WriteLine("Press ENTER to quite");
             Console.Read();
+        }
+        // read array from console
+        static int[] SorterFillArrayFromConsole( ref int sizeIn)
+        {
+            string input;
+            int i = 0;
+            int elem = 0;
+
+            //Random rnd = new Random();
+            // read the size of array
+            Console.Write("Please write the array size: ");
+            // read the size of array from user input
+            while (!(int.TryParse(Console.ReadLine(), out sizeIn)))
+            {
+                Console.WriteLine("Please enter proper array size again: ");
+            }
+            int [] arrayIn = new int[sizeIn];// init array
+            // read from console 1-by-1 separated by ENTER
+            Console.WriteLine("Please enter array's elements one-by-one: ");
+            while (i < sizeIn)
+            {
+                input = Console.ReadLine();
+                if (int.TryParse(input, out elem))
+                {
+                    arrayIn[i] = elem;
+                    i++;
+                }
+                else
+                {
+                    Console.WriteLine("Enter the proper array element #", i, " again: ");
+                }
+            }
+            Console.Write("The array before sorting: ");
+            return arrayIn;
         }
     }
 }
