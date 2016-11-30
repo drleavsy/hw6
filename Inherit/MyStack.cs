@@ -32,7 +32,7 @@ namespace Inherit
             top++; // move cursor to the top of the stack
             SetCount(GetCount() + 1);   // increase the size of stack
         }
-        public int Peek()
+        public override int Peek()
         {
             return GetValue();
         }

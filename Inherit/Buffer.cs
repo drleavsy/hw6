@@ -71,6 +71,7 @@ namespace Inherit
 
         virtual public bool IsFull() { return false; }
         virtual public bool IsEmpty()   { return false; }
+        virtual public int Peek() { return -2; }
 
         virtual public void Print() { }
 
@@ -90,5 +91,6 @@ namespace Inherit
                 arrayA[i] = -1;
             }
         }
+
     }
 }

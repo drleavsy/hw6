@@ -127,7 +127,7 @@ namespace Inherit
                 }
             }
         }
-        public int Peek()
+        public override int Peek()
         {
             return GetValue();
         }
